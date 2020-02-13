@@ -1,8 +1,12 @@
 package com.TW.timeCard.services;
 
 import com.TW.timeCard.models.TimeCardInfo;
+//import com.TW.timeCard.repositories.TimeCardRepository;
+//import org.springframework.beans.factory.annotation.Autowired;
 
 public class TimeCardService {
+//    @Autowired
+//    private TimeCardRepository timeCardRepository;
 
     public int whetherValidation(TimeCardInfo timeCardInfo) {
         if(timeCardInfo.checkResult()){
@@ -13,6 +17,7 @@ public class TimeCardService {
 
     public String getPostResult(TimeCardInfo timeCardInfo) {
         if (timeCardInfo.getTimeCardInfoErrorMessage().size()==0){
+//            timeCardRepository.save(timeCardInfo);
             return "Created";
         }
         else {
