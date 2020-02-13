@@ -18,7 +18,7 @@ public class TimeCardService {
         else {
             String errorMessages = "";
             for (String errorMessage:timeCardInfo.getTimeCardInfoErrorMessage()){
-                errorMessage += errorMessages+"\n";
+                errorMessages += errorMessage+"\n";
             }
             return "Error: "+errorMessages;
         }
